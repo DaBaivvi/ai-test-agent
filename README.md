@@ -55,12 +55,12 @@ Uses local model (e.g., qwen2.5:1.5b-instruct) via OpenAI-compatible API:
 	•	Anomaly section & normal explanation
 
   🧩 Architecture Overview
-  FastAPI
-   └── /run
-      └── agent.graph.run_pipeline()
-           ├── planner
-           ├── tools
-           ├── scoring
-           ├── guard
-           ├── reviewer (Ollama LLM)
-           └── report → Markdown / HTML
+	  FastAPI
+	   └── /run
+	      └── agent.graph.run_pipeline()
+	           ├── planner
+	           ├── tools
+	           ├── scoring
+	           ├── guard
+	           ├── reviewer (Ollama LLM)
+	           └── report → Markdown / HTML
