@@ -1,0 +1,14 @@
+{
+  "category": "Waschmaschinen",
+  "model": "XZ-500",
+  "sources": [
+    {"id": "eu-energy-label", "type": "official", "url": "https://example.org/eu-energy/xz-500", "hash": "sha256:abc...", "fetched_at": "2025-10-10"},
+    {"id": "lab-measurements", "type": "internal", "url": "lab://report/12345", "hash": "sha256:def...", "fetched_at": "2025-10-12"}
+  ],
+  "metrics": {
+    "energy_kwh_per_cycle": 0.6,
+    "clean_index": 0.82,
+    "noise_db": 52,
+    "service_score": 0.7
+  }
+}

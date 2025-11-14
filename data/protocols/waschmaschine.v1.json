@@ -1,0 +1,11 @@
+{
+  "protocol_id": "wm.v1",
+  "category": "Waschmaschinen",
+  "version": 1,
+  "criteria": [
+    {"id": "energy", "name": "Energieeffizienz", "weight": 0.35, "rule": {"scale": "lower_better", "min": 0.0, "max": 1.0}},
+    {"id": "clean",  "name": "Reinigungsleistung", "weight": 0.35, "rule": {"scale": "higher_better", "min": 0.0, "max": 1.0}},
+    {"id": "noise",  "name": "Geräusch",       "weight": 0.15, "rule": {"scale": "lower_better", "min": 0.0, "max": 1.0}},
+    {"id": "service","name": "Service/Support",  "weight": 0.15, "rule": {"scale": "higher_better", "min": 0.0, "max": 1.0}}
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "total": 0.532,
+  "details": [
+    {
+      "criterion_id": "energy",
+      "raw_value": 0.6,
+      "normalized": 0.4,
+      "weight": 0.35,
+      "partial_score": 0.13999999999999999,
+      "citations": [
+        "cite:211b4de8",
+        "cite:ba839987"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "criterion_id": "clean",
+      "raw_value": 0.82,
+      "normalized": 0.82,
+      "weight": 0.35,
+      "partial_score": 0.287,
+      "citations": [
+        "cite:211b4de8",
+        "cite:ba839987"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "criterion_id": "noise",
+      "raw_value": 52.0,
+      "normalized": 0.0,
+      "weight": 0.15,
+      "partial_score": 0.0,
+      "citations": [
+        "cite:211b4de8",
+        "cite:ba839987"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "criterion_id": "service",
+      "raw_value": 0.7,
+      "normalized": 0.7,
+      "weight": 0.15,
+      "partial_score": 0.105,
+      "citations": [
+        "cite:211b4de8",
+        "cite:ba839987"
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "protocol_id": "wm.v1",
+  "warnings": []
+}
