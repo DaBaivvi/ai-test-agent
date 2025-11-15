@@ -17,33 +17,34 @@ def hf_review(protocol_id: str, details: list[dict]) -> dict:
     }
 
     prompt = f"""
-你是一名严格的测试审核专家。
+You are a strict product test review expert.
 
-下面是一份测试评分明细(JSON):
+Below is a test scoring report (JSON):
 {json.dumps(payload, ensure_ascii=False, indent=2)}
 
-请**只按照下面的规则判断“异常”**:
+Please evaluate ONLY according to the following rules to identify *abnormalities*:
 
-1. 如果 raw_value 明显超出常规范围（例如协议或常识中的 min~max),视为异常。
-2. 如果 normalized 为 0 或 1,需要判断是否因为原始值极端 / 被截断。
-3. 如果 partial_score 为 0, 但该指标权重大于 0.1,优先认为是可疑，需要复核。
-4. 如果某个 criterion 的数据明显不合理（比如噪音 raw_value 很大但 normalized 却为 1),视为异常。
-5. 如果你无法判断，就说明“无法判断异常”。
+1. If the raw_value clearly exceeds the normal or protocol-defined min~max range, mark it as abnormal.
+2. If normalized is 0 or 1, evaluate whether this is due to extreme raw values or potential truncation.
+3. If partial_score is 0 while the weight is greater than 0.1, consider it suspicious and requiring further review.
+4. If any criterion shows logically inconsistent data (e.g., very large raw noise value but normalized=1), mark it as abnormal.
+5. If you cannot reliably determine whether something is abnormal, explicitly state: "Unable to determine abnormality."
 
-⚠️ 很重要：
-- 不要逐条原样抄写所有字段。
-- 只列出你认为“真的有问题”的指标；如果没有异常，请明确写：“未发现明显异常”。
-- 输出使用 Markdown,结构如下:
+⚠️ IMPORTANT:
+- Do NOT simply rewrite or repeat all fields.
+- ONLY list the criteria that you believe have *actual problems*.
+- If everything looks normal, clearly state: “No significant abnormalities found.”
+- Output MUST be in Markdown format using the structure below:
 
-## 异常项目
-- 指标ID: xxx
-  - 问题：……
-  - 依据：……
+## Abnormal Items
+- Criterion ID: xxx
+  - Issue: …
+  - Basis: …
 
-## 正常说明
-- 简要说明整体情况(1-3 句话)
+## Normal Summary
+- Provide a short overall assessment (1–3 sentences)
 
-现在开始你的分析：
+Begin your analysis now:
 """
 
     try:
