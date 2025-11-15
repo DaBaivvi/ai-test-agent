@@ -46,7 +46,8 @@ Uses local model (e.g., qwen2.5:1.5b-instruct) via OpenAI-compatible API:
 
   Example report screenshot:
 
-  <img width="850" height="814" alt="Bildschirmfoto 2025-11-13 um 14 23 03" src="https://github.com/user-attachments/assets/adc79037-eeaf-4fc0-a4bf-437d108f8644" />
+  <img width="651" height="857" alt="Bildschirmfoto 2025-11-15 um 12 19 17" src="https://github.com/user-attachments/assets/dd58f74a-5aab-4b83-82c5-7fa632840b5f" />
+
 
   Report includes:
 	•	Test header
